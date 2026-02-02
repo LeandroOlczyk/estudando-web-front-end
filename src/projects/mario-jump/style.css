@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(54, 44, 42);
+}
+
 .game-board {
     width: 100%;
     height: 500px;
