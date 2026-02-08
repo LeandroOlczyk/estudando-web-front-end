@@ -8,3 +8,12 @@
 body {
     background-color: #1828337e;
 }
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #312323;
+    border-radius: 8px;
+    padding: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

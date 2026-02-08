@@ -1,7 +1,6 @@
 <h2>Docker</h2>
-O projeto possui o arquivo `devcontainer.json` portanto será necessário utilizar o Docker<br>
-Caso não esteja instalado, realize o download.
-<br>
+O projeto utiliza uma imagem do Docker no arquivo `devcontainer.json`<br> 
+Portanto, verifique se o docker está instalado em seu ambiente de execução.
 
 <h2>Clone</h2>
 Utilize o `Explorador Remoto` para realizar o clone do repositório.
