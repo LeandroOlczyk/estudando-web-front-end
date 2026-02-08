@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "live": "live-server src"
+  }
+}
