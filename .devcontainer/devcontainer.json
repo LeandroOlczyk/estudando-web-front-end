@@ -1,4 +1,9 @@
 {
   "name": "Node DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bullseye"
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bullseye",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
 }
