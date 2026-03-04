@@ -10,7 +10,7 @@
   --h1: #0F2D4A;            /* h1 no “tom do header” */
   --link: #0B5EA8;          /* links */
   --accent: #2AA8A8;        /* botões/detalhes */
-  --shadow: 0 10px 25px rgba(15, 23, 42, .08);
+  --shadow: 0 10px 25px rgba(41, 48, 65, 0.08);
   
   /* Definição de Variáveis de Layout  */
   --header-height: 72px;
@@ -30,7 +30,7 @@ html{
     background-color: var(--header);
     padding: 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     position: fixed;
     width: 100%;
     top: 0;
@@ -42,7 +42,7 @@ section {
     margin: 15px auto;
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 #technologies ul {
@@ -64,7 +64,7 @@ section {
     background-color: #312323;
     border-radius: 8px;
     padding: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
 .li_inline {
@@ -83,9 +83,16 @@ section {
 .profile-picture{
   width: 300px;
   height: 300px;
-  /* border: 1px solid #6d6db0a3; */
+  border: 1px solid var(--surface-2);
   border-radius: 50%;
   object-fit: cover;
+}
+
+#about {
+    background-image: url(../assets/images/fundo-tecnologia.avif);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
 }
 
 #about-me {
