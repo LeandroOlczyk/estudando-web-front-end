@@ -37,6 +37,10 @@ html{
     left: 0;    
 }
 
+#menu a {
+    color: var(--surface);
+}
+
 section {
     background-color: var(--surface);
     margin: 15px auto;
@@ -53,25 +57,54 @@ section {
 }
 
 .project-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.project_card {
+    width: 250px;
+    height: auto;
+    margin: 10px 10px ;
+    padding: 3px;
+    background-color: rgba(121, 187, 199, 0.144);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.project_card:hover {
+    background-color: rgba(121, 187, 199, 0.2);
+    box-shadow: var(--shadow), 0 4px 8px rgba(41, 48, 65, 0.171);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
 
 .box {
     width: 200px;
     height: 200px;
-    background-color: #312323;
+    background-color: var(--surface-2);
     border-radius: 8px;
     padding: 3px;
     box-shadow: var(--shadow);
 }
 
 .li_inline {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-right: 20px;
-    padding: 1.5em;
+}
+
+.li_inline, a, p, h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.technologies_li_inline {
+    display: inline-block;
+    align-items: flex-end;
+    padding: 20px;
+
 }
 
 .center {
@@ -88,12 +121,12 @@ section {
   object-fit: cover;
 }
 
-#about {
+/* #about {
     background-image: url(../assets/images/fundo-tech.jpg);
     background-size: contain;
-    background-position: left center;
+    background-position: cover;
     background-repeat: no-repeat;
-}
+} */
 
 #about-me {
     max-width: 1000px;
