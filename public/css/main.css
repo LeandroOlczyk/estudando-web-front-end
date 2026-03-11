@@ -9,12 +9,23 @@
   --border: #D7DEE8;        /* bordas */
   --h1: #0F2D4A;            /* h1 no “tom do header” */
   --link: #0B5EA8;          /* links */
-  --accent: #2AA8A8;        /* botões/detalhes */
+  --accent: #85e4e43f;        /* botões/detalhes */
   --shadow: 0 10px 25px rgba(41, 48, 65, 0.08);
   
   /* Definição de Variáveis de Layout  */
   --header-height: 72px;
 }
+
+h2, h3, h4, h5 {
+    font-family: Verdana, Tahoma, sans-serif, 'Arial Narrow Bold', sans-serif;
+    color: var(--h1);
+}
+
+p, a, li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+}
+
 
 html{
   scroll-padding-top: calc(var(--header-height) + 16px);
@@ -52,8 +63,12 @@ section {
 #technologies ul {
     display: flex;
     justify-content: center;
-    /* gap: 20px; */
     flex-wrap: wrap;
+}
+
+.technologies_li_inline:hover {
+    transform: scale3d(1.05, 1.05, 1);   
+    transition: all 0.3s ease;
 }
 
 .project-list {
@@ -67,14 +82,14 @@ section {
     height: auto;
     margin: 10px 10px ;
     padding: 3px;
-    background-color: rgba(121, 187, 199, 0.144);
+    background-color: var(--accent);
     border: 1px solid var(--surface-2);
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
 
 .project_card:hover {
-    background-color: rgba(121, 187, 199, 0.2);
+    background-color: rgba(32, 176, 201, 0.438);
     box-shadow: var(--shadow), 0 4px 8px rgba(41, 48, 65, 0.171);
     transform: translateY(-5px);
     transition: all 0.3s ease;
@@ -114,19 +129,19 @@ section {
 }
 
 .profile-picture{
-  width: 300px;
-  height: 300px;
+  width: 380px;
+  height: 380px;
   border: 1px solid var(--surface-2);
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* #about {
-    background-image: url(../assets/images/fundo-tech.jpg);
+#about {
+    background-image: url(../assets/images/fundo-tecnologia.png);
     background-size: contain;
     background-position: cover;
     background-repeat: no-repeat;
-} */
+}
 
 #about-me {
     max-width: 1000px;
@@ -137,10 +152,24 @@ section {
     padding: 10px;
 }
 
-#about-me h1 {
+#about-me, h1, h2 {
   color: var(--h1);
 }
 
-#about-me p {
+#about-me, p {
     color: var(--text);
+}
+
+#certify_table {
+    border-collapse: separate;
+    border-spacing: 40px 20px;
+}
+
+#certify_table td {
+    vertical-align: center;
+}
+
+.certify_animation:hover {
+    transform: scale3d(1.05, 1.05, 1);   
+    transition: all 0.3s ease;
 }
