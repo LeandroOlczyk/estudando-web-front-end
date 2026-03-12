@@ -124,7 +124,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     border: none;
-    margin-top: 350px;
+    margin-top: 400px;
     color: white;
 }
 
@@ -135,9 +135,11 @@ body {
 
 .winning-message-text {
     color: white;
-    font-size: 5rem;
+    font-size: 3rem;
+    margin-top: 30px;
 }
 
 .show-winning-message {
     display: flex;
+    text-align: center;
 }
