@@ -1,0 +1,223 @@
+:root {
+    --color-primary: #4CAF50;
+
+    --color-button-calculate: #4CAF50;
+    --color-button-calculate-hover: #35960d;
+    --color-button-clear: #af4c4c;
+    --color-button-clear-hover: #7b0d0d;
+
+    --color-secondary: #f0f0f0;
+    --color-title: #1d2025d0;
+    --color-text: #333333;
+    --color-label: #333333c5;
+    --color-border: #7c7c7c3f;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* _____________________________________ Conteúdo _____________________________________ */
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content_frame_box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    width: 320px;
+    text-align: center;
+}
+
+/* .result_box {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--color-secondary);
+    margin: 20px;
+    padding: 10px;
+    height: 110px;
+    border: 3px solid var(--color-border);
+    border-radius: 5px;
+}
+
+#resultado {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+} */
+
+.result_box {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--color-secondary);
+    margin: 20px;
+    padding: 10px;
+    height: 110px;
+    border: 3px solid var(--color-border);
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.result_box #resultado {
+    color: inherit;
+}
+
+.form_row {
+    display: grid;
+    grid-template-columns: 110px 90px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+label {
+    text-align: right;
+    font-size: large;
+    font-weight: bold;
+    color: var(--color-label);
+}
+
+input {
+    background-color:var(--color-secondary);
+    border: 3px solid var(--color-border);
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/* _____________________________________ Alinhamentos _____________________________________ */
+
+.frame_title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 10px 0px 20px 0px;
+    color: var(--color-title)
+}
+
+hr {
+    margin: 10px 0px 25px 0px;
+    color: var(--color-border);
+}
+
+.aling_side_by_side {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.justify_content_center {
+    display: grid;
+    align-items: center;
+}
+
+/* _____________________________________ Botões _____________________________________ */
+
+.calculate_button {
+    background-color: var(--color-button-calculate);
+    color: white;
+    border: none;
+    margin: 0px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.calculate_button:hover {
+    background-color: var(--color-button-calculate-hover);
+}
+
+.clear_button {
+    background-color: var(--color-button-clear);
+    color: white;
+    border: none;
+    margin: 0px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.clear_button:hover {
+    background-color: var(--color-button-clear-hover);
+}
+
+/* _____________________________________ Classificação _____________________________________ */
+
+.default {
+    background-color: var(--color-secondary);
+    border: 3px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.severe_thinness {
+    background-color: #f8d7da;
+    border-color: #b02a37;
+    color: #842029;
+}
+
+.moderate_thinness {
+    background-color: #fff3cd;
+    border-color: #d39e00;
+    color: #856404;
+}
+
+.mild_thinness {
+    background-color: #fff8e1;
+    border-color: #e0a800;
+    color: #7a5c00;
+}
+
+.normal_weight {
+    background-color: #d1e7dd;
+    border-color: #198754;
+    color: #0f5132;
+}
+
+.overweight {
+    background-color: #ffe5b4;
+    border-color: #fd7e14;
+    color: #8a4b00;
+}
+
+.obesity_class_1 {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #842029;
+}
+
+.obesity_class_2 {
+    background-color: #f5c2c7;
+    border-color: #b02a37;
+    color: #6a1b21;
+}
+
+.obesity_class_3 {
+    background-color: #d63384;
+    border-color: #842029;
+    color: white;
+}
