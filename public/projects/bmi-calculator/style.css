@@ -10,7 +10,7 @@
     --color-title: #1d2025d0;
     --color-text: #333333;
     --color-label: #333333c5;
-    --color-border: #7c7c7c3f;
+    --color-border: #4e505418;
     --font-family: 'Arial', sans-serif;
     --font-size: 16px;
 }
@@ -71,9 +71,10 @@ body {
     margin: 20px;
     padding: 10px;
     height: 110px;
-    border: 3px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .result_box #resultado {
@@ -98,12 +99,13 @@ label {
 
 input {
     background-color:var(--color-secondary);
-    border: 3px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     width: 90px;
     height: 30px;
     font-size: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
