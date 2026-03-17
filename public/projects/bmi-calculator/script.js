@@ -4,6 +4,8 @@ const limpar=document.getElementById('limpar');
 
 function imc() {
 
+    LimparResultadoAnterior()
+
     let peso=document.getElementById('peso').value;
     let altura=document.getElementById('altura').value;
 
@@ -24,12 +26,16 @@ function imc() {
 
     const classificacao = classificarIMC(resultadoIMC);
 
-    let msg = `IMC: ${resultadoIMC.toFixed(2)} - ${classificacao.label}`;
+    let msg = `IMC: ${resultadoIMC.toFixed(2)}  ${classificacao.label}`;
 
     caixaResultado.className = 'result_box';
     caixaResultado.classList.add(classificacao.class);
 
-    return resultado.textContent = msg;
+    if (resultadoIMC > 60) {
+        return
+    }
+
+    resultado.textContent = msg;
 }
 
 function ValidarCampos(peso,altura) {
@@ -62,7 +68,8 @@ function classificarIMC(valorIMC) {
         { min: 25, max: 30, class: "overweight", label: "Sobrepeso" },
         { min: 30, max: 35, class: "obesity_class_1", label: "Obesidade grau I" },
         { min: 35, max: 40, class: "obesity_class_2", label: "Obesidade grau II" },
-        { min: 40, max: Infinity, class: "obesity_class_3", label: "Obesidade grau III" }
+        { min: 40, max: 60, class: "obesity_class_3", label: "Obesidade grau III" },
+        { min: 60, max: Infinity, class: "obesity_max_level", label: "" }
     ];
 
     for (const item of tabelaIMC) {
@@ -73,10 +80,21 @@ function classificarIMC(valorIMC) {
 
 }
 
+function LimparResultadoAnterior() {
+    document.getElementById('resultado').textContent = '';
+
+    const caixaResultado = document.querySelector('.result_box');
+    caixaResultado.className = 'result_box default';
+
+}
+
 function limparCampos() {
     document.getElementById('peso').value = '';
     document.getElementById('altura').value = '';
     document.getElementById('resultado').textContent = '';
+
+    const caixaResultado = document.querySelector('.result_box');
+    caixaResultado.className = 'result_box default';
 }
 
 calcular.addEventListener('click', imc);
