@@ -7,7 +7,9 @@
   --text: #0F172A;          /* texto principal */
   --muted: #475569;         /* texto secundário */
   --border: #D7DEE8;        /* bordas */
-  --h1: #0F2D4A;            /* h1 no “tom do header” */
+  --title: #0F2D4A;            /* h1 no “tom do header” */
+  --card-title: #0b3f61a4;
+  --card-text: #0b3f61a4;
   --link: #0B5EA8;          /* links */
   --accent: #85e4e43f;        /* botões/detalhes */
   --shadow: 0 10px 25px rgba(41, 48, 65, 0.08);
@@ -18,7 +20,7 @@
 
 h2, h3, h4, h5 {
     font-family: Verdana, Tahoma, sans-serif, 'Arial Narrow Bold', sans-serif;
-    color: var(--h1);
+    color: var(--title);
 }
 
 p, a, li {
@@ -45,11 +47,14 @@ html{
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;    
+    left: 0;
+    z-index: 3;
 }
 
 #menu a {
     color: var(--surface);
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 section {
@@ -71,48 +76,64 @@ section {
     transition: all 0.3s ease;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 3em;
 }
 
 .project_card {
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
     width: 250px;
     height: auto;
-    margin: 10px 10px ;
     padding: 3px;
     background-color: var(--accent);
-    border: 1px solid var(--surface-2);
+    border: 1px solid var(--border);
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
 
+.project_card h5 {
+    margin-top: 15px;
+    color: var(--card-title);
+    font-weight: 700;
+}
+
+.project_card img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project_card p {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-weight: 500;
+    align-self: baseline;
+    color: var(--card-text)
+}
+
 .project_card:hover {
     background-color: rgba(32, 176, 201, 0.438);
-    box-shadow: var(--shadow), 0 4px 8px rgba(41, 48, 65, 0.171);
+    box-shadow: var(--shadow), 0 4px 25px rgba(41, 48, 65, 0.171);
     transform: translateY(-5px);
     transition: all 0.3s ease;
 }
 
-.box {
+.ico_box {
     width: 200px;
     height: 200px;
     background-color: var(--surface-2);
     border-radius: 8px;
     padding: 3px;
-    box-shadow: var(--shadow);
-}
-
-.li_inline {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.li_inline, a, p, h5 {
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .technologies_li_inline {
@@ -120,12 +141,6 @@ section {
     align-items: flex-end;
     padding: 20px;
 
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .profile-picture{
@@ -153,7 +168,7 @@ section {
 }
 
 #about-me, h1, h2 {
-  color: var(--h1);
+  color: var(--title);
 }
 
 #about-me, p {
@@ -172,4 +187,10 @@ section {
 .certify_animation:hover {
     transform: scale3d(1.05, 1.05, 1);   
     transition: all 0.3s ease;
+}
+
+.certify_border {
+    border: #0b3f615b, solid 1px;
+    border-radius: 8px;
+    box-shadow: var(--shadow), 0 4px 5px rgba(41, 48, 65, 0.171);
 }
