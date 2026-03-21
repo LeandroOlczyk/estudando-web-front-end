@@ -92,7 +92,8 @@ section {
 .project_card {
     display: flex;
     flex-direction: column;
-    text-align: center; 
+    text-align: center;
+    align-items: center; 
     width: 250px;
     height: auto;
     padding: 3px;
@@ -117,12 +118,32 @@ section {
     margin-bottom: 10px;
     font-style: italic;
     font-weight: 500;
-    align-self: baseline;
+    align-items: center;
     color: var(--card-text)
 }
 
 .project_card:hover {
     background-color: rgba(32, 176, 201, 0.438);
+    box-shadow: var(--shadow), 0 4px 25px rgba(41, 48, 65, 0.171);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.new_project_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: auto;
+    padding: 3px;
+    background-color: #17eb0415;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.new_project_card:hover {
+    background-color: rgba(32, 201, 54, 0.315);
     box-shadow: var(--shadow), 0 4px 25px rgba(41, 48, 65, 0.171);
     transform: translateY(-5px);
     transition: all 0.3s ease;
