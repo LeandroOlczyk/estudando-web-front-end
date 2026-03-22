@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --button-size: 30px;
+    --color-button-hover: rgba(119, 112, 11, 0.486);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(img/drum_3.png);
+    background-size: cover;
+    background-position: center;
+
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 10vh auto;
+    font-size: 2em;
+    font-weight: 800;
+
+    user-select: none;
+
+    color: rgba(255, 255, 255, 0.808);
+    text-shadow: 
+    0px 0px 10px rgba(255, 255, 255, 0.774),
+    0px 0px 10px rgb(0, 0, 0);   
+}
+
+.conteiner {
+    margin: 10px auto;
+    width: 300px;
+    height: 100px;
+    gap: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.key {
+    margin: 10px;
+    padding: 20px;
+    width: var(--button-size);
+    height: var(--button-size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    user-select: none;
+    cursor: pointer;
+
+    color: rgb(230, 230, 230);
+    background-color: rgba(13, 28, 78, 0.842);
+
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 100%;
+
+    transition: transform .1s;
+}
+
+.active {
+    transform: scale(1.2);
+    background-color: var(--color-button-hover);
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    box-shadow: 0 0 10px var(--color-button-hover);
+}
