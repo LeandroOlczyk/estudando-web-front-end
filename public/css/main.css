@@ -80,13 +80,31 @@ html{
 
 .menu_list_link {
     color: var(--link);
-    margin-top: 8px;
-    margin-bottom: 8px;
     text-decoration: none;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s ease;
 }
 
 .menu_list_link:hover {
+    color: #85e4e4;
+}
 
+.menu_list_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.menu_list_link:hover::after {
+    width: 100%;
 }
 
 section {

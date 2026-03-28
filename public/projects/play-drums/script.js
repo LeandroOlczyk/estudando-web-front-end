@@ -1,13 +1,14 @@
 const sons = {
-    '1': 'boom.wav',
-    '2': 'clap.wav',
-    '3': 'hihat.wav',
-    '4': 'kick.wav',
+    '0': 'skegs.mp3',
+    '1': 'kick.wav',
+    '2': 'snare.wav',
+    '3': 'snare.mp3',
+    '4': 'hihat.wav',
     '5': 'openhat.wav',
     '6': 'ride.wav',
-    '7': 'snare.wav',
-    '8': 'tink.wav',
-    '9': 'tom.wav'
+    '7': 'clap.wav',
+    '8': 'crash.mp3',
+    '9': 'tick.mp3'
 }
 
 const reenderizarDivNumeros = (texto) => {
