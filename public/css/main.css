@@ -10,7 +10,7 @@
   --title: #0F2D4A;            /* h1 no “tom do header” */
   --card-title: #0b3f61a4;
   --card-text: #0b3f61a4;
-  --link: #0B5EA8;          /* links */
+  --link: #FFFFFF;          /* links */
   --accent: #85e4e43f;        /* botões/detalhes */
   --shadow: 0 10px 25px rgba(41, 48, 65, 0.08);
   
@@ -36,7 +36,7 @@ html{
 
 #body {
     background-color: var(--bg);
-    margin: 70px auto;
+    margin: 65px auto;
 }
 
 #menu {
@@ -46,6 +46,10 @@ html{
     text-align: center;
     position: fixed;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 0;
     width: 100%;
     top: 0;
@@ -54,32 +58,35 @@ html{
     z-index: 3;
 }
 
-#menu a {
-    color: var(--surface);
+#menu ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+}
+
+.menu_list {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+
+    padding: 0;
+    margin: 20px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 350;
+}
+
+.menu_list_link {
+    color: var(--link);
     margin-top: 8px;
     margin-bottom: 8px;
     text-decoration: none;
 }
 
-#menu ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
+.menu_list_link:hover {
 
-#menu ul li {
-    list-style: none;
-    cursor: pointer;
-    user-select: none;
-
-    padding: 0 10px;
-    margin: 25px;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.5em;
-    font-weight: 500;
 }
 
 section {
